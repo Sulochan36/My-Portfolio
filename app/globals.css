@@ -14,13 +14,53 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #04001a;
     --foreground: #ededed;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.headings {
+  font-size: 36px;
+  font-family: var(--font-geist-mono);
+  margin-top:10px ;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subheading {
+  font-size: 24px;
+  font-family: var(--font-geist-mono);
+}
+
+.tech-stack {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border-color: white;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: white;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.9em;
+  font-weight: bolder;
+  font-size: 1.1rem;
 }
