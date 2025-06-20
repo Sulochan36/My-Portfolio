@@ -51,7 +51,7 @@ const Navbar = () => {
             </div>
 
             <a
-              href="https://drive.google.com/file/d/101O_UHvEXUDLN1D-LKsHABunO1WsuHVs/view?usp=sharing"
+              href="https://docs.google.com/document/d/1lWpjDMwipEqvqEPHT4k2PpzNxO7KA0zXCZ36K1huH04/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer group relative flex gap-1.5 px-6 py-3 bg-blue-500 bg-opacity-80 text-white rounded-3xl hover:bg-opacity-70 hover:bg-blue-800 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] duration-500 font-semibold shadow-md"
