@@ -2,10 +2,10 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full flex flex-col flex-wrap justify-center items-center lg:items-start p-8 font-mono mt-20'>
+        <section id="home" className='w-full flex flex-col flex-wrap justify-center items-center p-8 font-mono mt-30 mb-16'>
             <p className='lg:text-2xl text-xl text-blue-500 text-center lg:text-left'>Hi , my name is,</p>
-            <h1 className='lg:text-7xl md:text-5xl text-[25px] my-5 text-center lg:text-left min-w-0.5 font-bold'>Sulochan Mahajan.</h1>
-            <p className="text-gray-400 text-lg mb-8 text-justify text-wrap max-w-2xl text-[12px] md:text-[18px]">
+            <h1 className='lg:text-7xl md:text-5xl text-[25px] my-5 text-center lg:text-left min-w-0.5 font-bold'>Sulochan Mahajan</h1>
+            <p className="text-gray-400 text-lg mb-8 text-justify text-wrap max-w-2xl text-[12px] md:text-[16px]">
                 I’m a full-stack developer who loves crafting clean, scalable web
                 applications. My goal is to build solutions that offer both
                 exceptional performance and a delightful user experience.

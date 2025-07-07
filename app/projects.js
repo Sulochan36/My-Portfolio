@@ -29,7 +29,7 @@ export const projects = [
             '💬 A responsive and minimal personal portfolio built with Next.js to showcase my skills, projects, and experience as a web developer. It features smooth navigation, clean UI, and a dynamic “About Me” section designed for clarity and engagement. Focused on performance and accessibility, this project reflects my ability to create production-ready frontend applications.',
         cover:
             '/portfolio.png',
-        livePreview: 'https://sulochan-mahajan.onrender.com/',
+        livePreview: 'https://sulochan-mahajan.vercel.app/',
         githubLink: 'https://github.com/Sulochan36/My-Portfolio',
         techstack: ['Next.js', 'JavaScript', 'Tailwind CSS'],
     },
