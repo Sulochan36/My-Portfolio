@@ -12,12 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+
   :root {
     --background: #04001a;
     --foreground: #ededed;
   }
-}
+
 
 html {
   scroll-behavior: smooth;
