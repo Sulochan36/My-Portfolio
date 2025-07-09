@@ -43,7 +43,7 @@ const About = () => {
 
             {/************************************************************************************************************* ************/}
 
-            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all lg:max-w-[50%] w-full text-left mt-8">
+            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all lg:max-w-[50%] w-full text-left md:mt-0 mt-8">
                 <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                     <li>
