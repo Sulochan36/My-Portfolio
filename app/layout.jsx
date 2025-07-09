@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 const geistSans = Geist({
@@ -26,26 +26,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
-        {/* Google Analytics */}
-        
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-3BL8QZS5ND"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-3BL8QZS5ND');
-            `,
-          }}
-        />
-
-        <div>
+      <div>
           <Navbar/>
           <div className="md:mx-24 ">
             {children}
@@ -53,8 +34,9 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
         
-        
+        <GoogleAnalytics gaId="G-3BL8QZS5ND" />
       </body>
+      
     </html>
   );
 }
