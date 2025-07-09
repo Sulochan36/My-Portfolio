@@ -17,7 +17,7 @@ const About = () => {
             <h2 className='headings'>👤 About Me</h2>
             <div className='flex flex-wrap gap-x-5 lg:flex-nowrap '>
             
-            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[700px] ">
+                <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[50%] ">
                 <p className="text-gray-300 mb-6">
 
                     👋 Hi, I'm a <strong>frontend developer</strong> who loves blending <strong>creativity</strong> with
@@ -43,7 +43,7 @@ const About = () => {
 
             {/************************************************************************************************************* ************/}
 
-            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[700px]  text-left">
+            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[50%]  text-left">
                 <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                     <li>
