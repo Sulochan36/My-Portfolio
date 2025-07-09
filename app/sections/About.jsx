@@ -13,11 +13,11 @@ const About = () => {
 
 
     return (
-        <section id="about" className='w-full flex flex-col justify-center items-center p-6 font-mono text-justify whitespace-wrap text-[12px] md:text-[18px]'>
+        <section id="about" className='w-full flex flex-col justify-center items-center p-6 font-mono text-justify whitespace-wrap text-[14px] md:text-[18px]'>
             <h2 className='headings'>👤 About Me</h2>
             <div className='flex flex-wrap gap-x-5 lg:flex-nowrap '>
             
-                <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[50%] ">
+                <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all lg:max-w-[50%] w-full ">
                 <p className="text-gray-300 mb-6">
 
                     👋 Hi, I'm a <strong>frontend developer</strong> who loves blending <strong>creativity</strong> with
@@ -43,7 +43,7 @@ const About = () => {
 
             {/************************************************************************************************************* ************/}
 
-            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all max-w-[50%]  text-left">
+            <section className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all lg:max-w-[50%] w-full text-left mt-8">
                 <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                     <li>

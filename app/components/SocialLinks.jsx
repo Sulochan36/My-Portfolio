@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const SocialLinks = () => {
     return (
-        <div className="border-2 rounded-3xl fixed lg:top-1/2 transform -translate-y-1/2 left-5 z-10 flex lg:flex-col flex-row gap-4 sm:left-2 top-23 lg:left-5 bg-[rgba(10, 10, 10, 0.5)] backdrop-blur-2xl shadow-lg">
+        <div className="hidden lg:flex border-2 rounded-3xl fixed top-1/2 transform -translate-y-1/2 left-5 z-10 flex-col gap-4 bg-[rgba(10,10,10,0.5)] backdrop-blur-2xl shadow-lg">
             {/* GitHub Link */}
             <a
                 href="https://github.com/Sulochan36"
