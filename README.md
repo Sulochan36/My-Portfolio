@@ -1,4 +1,4 @@
-# 🧑‍💻 Sulochan's Developer Portfolio
+# 🧑‍💻 My Portfolio
 
 This is my personal portfolio website built with **NextJS** and styled using **Tailwind CSS**. It showcases my skills, projects, resume, and anybody can contact me.
 
