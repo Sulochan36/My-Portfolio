@@ -1,22 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+  --color-background: #f2f2f2;
+  --color-container-background: #ffffff;
+  --color-heading: #0d0d0d;
+  --color-content: #333333;
+  --color-primary: #155dfc;
+  --color-text: #000000;
+  --color-section: #8a8a8a;
+  --shadow-text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  --font-sans: var(--font-inter);
+  --shadow-navbar: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-
-  :root {
-    --background: #04001a;
-    --foreground: #ededed;
+@layer base {
+  .dark {
+    --color-background: #000000;
+    --color-container-background: #0d0d0d;
+    --color-heading: #ffffff;
+    --color-content: #a1a1a1;
+    --color-primary: #155dfc;
+    --color-text: #ffffff;
+    --color-section: #5e5e5e;
+    --shadow-text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
+    --font-sans: var(--font-inter);
+    --shadow-navbar: 0px 5px 10px rgba(255, 255, 255, 0.5) ;
   }
+}
+
+
 
 
 html {
@@ -24,22 +40,20 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--color-background);
   color: var(--foreground);
-
+  font-family: var(--font-sans), sans-serif;
 }
 
 .headings {
-  font-size: 36px;
-  font-family: var(--font-geist-mono);
-  margin-top:10px ;
-  margin-bottom: 10px;
+  font-size: 30px;
   font-weight: bold;
+  color: var(--color-heading);
+  text-shadow: var(--shadow-text-shadow);
 }
 
 .subheading {
   font-size: 24px;
-  font-family: var(--font-geist-mono);
 }
 
 .tech-stack {
@@ -47,7 +61,7 @@ body {
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  border-color: white;
+  border-color: #8a8a8a;
   transition: all 0.3s ease;
 }
 
@@ -65,3 +79,11 @@ ul li::before {
   font-size: 1.1rem;
 }
 
+.text-shadow {
+  text-shadow: var(--shadow-text-shadow);
+}
+
+.section-seprator{
+  height: 2px;
+  width: 100%;
+}

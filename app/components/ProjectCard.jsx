@@ -1,10 +1,11 @@
 import { DollarSign, Eye, Github, Heart, Star, Timer } from 'lucide-react';
 import React from 'react';
+import { normalize, techIconMap } from '../lib/utils';
 
 const IconText = ({ icon: Icon, text }) => (
-    <li className="flex gap-2 text-white">
-        <Icon className="w-[18px] md:w-5" />
-        <span className="text-sm">{text}</span>
+    <li classNameName="flex gap-2 text-white">
+        <Icon classNameName="w-[18px] md:w-5" />
+        <span classNameName="text-sm">{text}</span>
     </li>
 );
 
@@ -25,68 +26,64 @@ const ProjectCard = ({ data }) => {
     } = data;
 
     return (
-        <div className="rounded-[10px] border border-[#444444]  p-5 text-white">
-            <div className="flex items-center justify-between gap-2">
-                <div className="flex-1">
-                    <div className="flex flex-col gap-3">
-                        <h3 className="text-xl font-medium sm:text-2xl font-bold">{title}</h3>
-                        <div className='flex flex-row flex-wrap gap-2 text-[12px] md:text-[18px]'>
-                            {techstack.map((tech, index) => (
-                                <span
-                                    key={index}
-                                    className="tech-stack"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                        
+        <div className="max-w-sm rounded-lg shadow-lg shadow-neutral-400 bg-transparent flex flex-col gap-5">
+            <div>
+                <a href="#">
+                    <img height={300} width={300} className="w-full rounded-xl object-cover transition duration-300 hover:scale-3d" src={cover} alt="" />
+                </a>
+            </div>
+            
+            <div className="p-5">
+                <a href="#">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-heading">{title}</h5>
+                </a>
+                <p className="max-w-xs mt-2 text-[16px] text-content tracking-tight text-justify">{shortDescription}</p>
+
+                <div className="my-4">
+                    <div className="flex flex-wrap gap-2">
+                        {techstack.map((tech, index) => {
+                            const iconSrc = techIconMap[normalize(tech)] || '/tech-icons/default.png';
+                            return (
+                                <div key={index} className="flex items-center gap-1 bg-transparent px-2 py-1 rounded-md">
+                                    <img
+                                        src={iconSrc}
+                                        alt={tech}
+                                        className="h-5 w-5 rounded-full object-contain bg-white p-0.5"
+                                        loading="lazy"
+                                        title={tech}
+                                    />
+                                    <span className="text-sm text-text">{tech}</span>
+                                </div>
+                            );
+                        })}
                     </div>
-                    <ul className="mt-4 flex flex-col flex-wrap gap-2 sm:flex-row sm:gap-4">
-                        {(visitors || numberOfSales) && (
-                            <IconText text={(visitors || numberOfSales)?.toString() || ''} icon={Heart} />
-                        )}
-                        {siteAge && <IconText text={siteAge} icon={Timer} />}
-                        {earned && <IconText text={earned} icon={DollarSign} />}
-                        {(ratings || githubStars) && (
-                            <IconText text={(ratings || githubStars)?.toString() || ''} icon={Star} />
-                        )}
-                    </ul>
                 </div>
-                <figure className="flex h-[150px] w-[200px] justify-end overflow-hidden">
-                    <img
-                        src={cover}
-                        alt="Project Cover"
-                        className="h-full w-full rounded-md object-contain border-2 border-gray-800"
-                    />
-                </figure>
-            </div>
-            <div className="mb-7 mt-5 rounded-2xl border border-[#444444]  p-4 text-[12px] md:text-[18px]">
-                <p className="text-base font-light">{shortDescription}</p>
-            </div>
-            <div className="flex gap-5">
-                {livePreview && (
-                    <a
-                        href={livePreview}
-                        className="flex gap-2 text-sm text-blue-500 underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:gap-3 md:text-base"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Eye className="w-[18px] md:w-5" />
-                        <span>Live Preview</span>
-                    </a>
-                )}
-                {githubLink && (
-                    <a
-                        href={githubLink}
-                        className="flex gap-2 text-sm text-blue-500 underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:gap-3 md:text-base"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Github className="w-[18px] md:w-5" />
-                        <span>Github Link</span>
-                    </a>
-                )}
+
+                <div className="flex flex-row gap-2 mt-5">
+                    {livePreview && (
+                        <a
+                            href={livePreview}
+                            className="flex gap-2 text-sm text-primary underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 dark:hover:text-white md:gap-3 md:text-base"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Eye className="w-[18px] md:w-5" />
+                            <span>Live Preview</span>
+                        </a>
+                    )}
+                    {githubLink && (
+                        <a
+                            href={githubLink}
+                            className="flex gap-2 text-sm text-primary underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 dark:hover:text-white md:gap-3 md:text-base"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Github className="w-[18px] md:w-5" />
+                            <span>Github Link</span>
+                        </a>
+                    )}
+                </div>
+
             </div>
         </div>
     );

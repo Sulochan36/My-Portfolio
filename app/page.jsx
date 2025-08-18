@@ -10,11 +10,11 @@ import SocialLinks from './components/SocialLinks'
 const page = () => {
   return (
     <div className='flex flex-col justify-center items-center gap-5'>
-      <SocialLinks className="hidden md:block"/>
+      {/* <SocialLinks className="hidden md:block"/> */}
       <Hero/>
+      <Projects />
+      <Experience />
       <About/>
-      <Experience/>
-      <Projects/>
       <Contact/>
       
     </div>
