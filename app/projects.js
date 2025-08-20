@@ -20,7 +20,7 @@ export const projects = [
             '💬 A real-time chat application built using the MERN stack, integrating WebSockets via Socket.io for seamless two-way communication. Includes user authentication, real-time messaging, and a modern responsive UI with Tailwind CSS and DaisyUI themes. Built as a hands - on project to strengthen my full - stack skills.I am currently exploring new features like emoji reactions, group chats, and file sharing to make the app more interactive and production-ready.',
         cover:
             '/quicktalk.png',
-        livePreview: 'https://quicktalk-g98k.onrender.com',
+        livePreview: 'https://quick-talk-one.vercel.app/',
         githubLink: 'https://github.com/Sulochan36/QuickTalk',
         techstack: ["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "Tailwind CSS", "DaisyUI", "JWT", "Zustand"],
     },
