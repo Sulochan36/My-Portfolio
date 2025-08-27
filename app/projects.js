@@ -8,7 +8,7 @@ export const projects = [
             'A minimalist, responsive web app built to help users set clear goals, break them down into actionable substeps, and track progress visually. Users can create and manage multiple goals, each with its own to-do list, purpose, timelines, and progress bar. The interface supports editing, status updates (Not Started, Ongoing, Completed), and a focused dashboard view for productivity insights.🔧 Currently powered by LocalStorage. Backend functionality (with user auth, database storage, analytics) will be integrated soon to enable persistence and multi-user support.',
         cover:
             '/Targetbooster.png',
-        livePreview: 'https://targetbooster.onrender.com/',
+        livePreview: 'https://target-booster.vercel.app/',
         githubLink: 'https://github.com/Sulochan36/TargetBooster',
         techstack: ['React', 'TailwindCSS', 'ShadCN UI', 'LocalStorage(Backend coming soon)'],
     },
