@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
     return (
-        <section id="experience" className=' w-full md:max-w-4xl flex flex-col justify-center items-center p-6 mt-30 mb-16 text-[12px] md:text-[18px]'>
+        <section id="experience" className=' w-full md:max-w-4xl flex flex-col justify-center items-center p-6 mt-10 mb-10 text-[12px] md:text-[18px]'>
             <h2 className='headings'>Work Experience</h2>
             <section className="rounded-xl p-8 hover:-translate-y-1 transition-all w-full ">
                 <div className="space-y-4 text-content">

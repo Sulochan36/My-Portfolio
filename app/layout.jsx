@@ -23,10 +23,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} antialiased`}
       >
-        <div>
+        <div className="flex flex-grow min-h-screen flex-col">
           <Container className='min-h-screen shadow-2xl shadow-neutral-400  bg-container-background rounded-2xl border-[2px] border-neutral-200 dark:border-neutral-600 '>
             <Navbar />
-            <div>
+            <div className="min-h-screen mt-30">
               {children}
             </div>
             <Footer />

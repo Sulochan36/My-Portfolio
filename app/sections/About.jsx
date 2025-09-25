@@ -14,7 +14,7 @@ const About = () => {
 
     return (
         
-        <section id="about" className='w-full md:max-w-4xl flex flex-col px-8 mt-30 mb-16 text-justify items-center whitespace-wrap text-[14px] md:text-[18px]'>
+        <section id="about" className='w-full md:max-w-4xl flex flex-col px-8 mt-10 mb-10 text-justify items-center whitespace-wrap text-[14px] md:text-[18px]'>
             <h2 className='headings'>About Me</h2>
             <div className='flex flex-col flex-wrap gap-x-5 lg:flex-nowrap '>
             

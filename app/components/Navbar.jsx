@@ -62,19 +62,20 @@ const Navbar = () => {
             {navItems.map((item) => (
               <Link
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`/#${item.toLowerCase()}`}
                 onMouseEnter={()=>setHovered(item)}
                 onMouseLeave={()=>setHovered(null)}
-                className="text-text hover:text-white transition-colors relative px-2 py-1 "
+                className="text-text hover:text-primary transition-colors relative px-2 py-1 "
               >
-                {hovered === item && (
-                  <motion.span layoutId='hovered-span' className='absolute inset-x-0 bottom-0 h-full w-full bg-neutral-500 rounded-2xl'
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                  />
-                )}
                 <span className='relative z-10'>{item}</span>
               </Link>
             ))}
+          <Link
+            className="text-text hover:text-primary transition-colors relative px-2 py-1 cursor-pointer"
+            href="/lab"  // Use onClick to trigger navigation
+          >
+            <span className="relative z-10">Lab</span>
+          </Link>
           
           </div>
 
