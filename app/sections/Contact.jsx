@@ -28,7 +28,7 @@ const Contact = () => {
         }
     };
     return (
-        <section id="contact" className='w-full md:max-w-4xl flex flex-col justify-center items-center p-2 mt-10 mb-10 '>
+        <section id="contact" className='w-full flex flex-col justify-center items-center p-6 shadow-[inset_1px_2px_8px_1px_rgba(0,0,0,0.3),inset_-1px_-2px_8px_2px_rgb(255,255,255,0.5)]'>
             <h2 className='headings'>Get In Touch</h2>
             <div>
                 <form onSubmit={onSubmit} className='flex flex-col flex-wrap gap-5 min-w-[130px] md:min-w-xl lg:min-w-2xl mt-10 dark:text-white'>

@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full lg:max-w-4xl flex flex-col flex-wrap px-8 py-10 mt-0 mb-10 tracking-tight'>
+        <section id="home" className='w-full flex flex-col flex-wrap px-8 py-15 tracking-tight shadow-[inset_1px_2px_8px_1px_rgba(0,0,0,0.3),inset_-1px_-2px_8px_2px_rgb(255,255,255,0.5)]'>
 
             <p  className='lg:text-xl text-xl text-primary text-left font-semibold'>Hi , my name is,</p>
             <h1 className='lg:text-5xl md:text-3xl text-[25px] my-5 text-left min-w-0.5 text-heading font-bold text-shadow'>Sulochan Mahajan</h1>

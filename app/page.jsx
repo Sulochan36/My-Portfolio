@@ -9,16 +9,12 @@ import SocialLinks from './components/SocialLinks'
 
 const page = () => {
   return (
-    <div className='flex flex-col justify-center items-center gap-5'>
+    <div className='flex flex-col justify-center items-center'>
       {/* <SocialLinks className="hidden md:block"/> */}
       <Hero/>
-      <span className='partition'></span>
       <Projects />
-      <span className='partition'></span>
       <Experience />
-      <span className='partition'></span>
       <About/>
-      <span className='partition'></span>
       <Contact/>
       
     </div>

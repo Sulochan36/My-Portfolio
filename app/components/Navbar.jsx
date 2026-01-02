@@ -5,6 +5,7 @@ import Container from './Container';
 import Link from 'next/link';
 import { easeInOut, motion, useMotionValueEvent, useScroll } from "motion/react"
 import DarkToggle from './DarkToogle';
+import Image from 'next/image';
 
 const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
@@ -39,15 +40,21 @@ const Navbar = () => {
         duration : 0.2,
         ease : easeInOut,
       }}
-        className='backdrop-blur-2xl fixed inset-x-0 top-0 mx-auto flex max-w-4xl justify-between items-center py-2 z-10 rounded-full px-3'
+        className='backdrop-blur-2xl fixed inset-x-0 top-0 mx-auto mt-2 flex max-w-4xl justify-between items-center py-2 z-10 rounded-full px-3'
       
       >
         
 
           {/* Logo */}
-          <a href="#home" className="text-2xl font-bold dark:text-white border-2 p-2 rounded-full">
-          S<span className="text-blue-400">M</span>
-          </a>
+        
+          <Image
+            src="/propic.jpg"
+            width={100}
+            height={100}
+            className='w-12 h-12 object-fit rounded-full shadow-md shadow-neutral-600'
+            alt='Profile Pic'
+          />
+          
 
           {/* Hamburger Icon (Mobile) */}
           <div
@@ -58,7 +65,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-0.5 text-md">
+          <div className="hidden md:flex items-center gap-0.5">
             {navItems.map((item) => (
               <Link
                 key={item}
@@ -72,7 +79,7 @@ const Navbar = () => {
             ))}
           <Link
             className="text-text hover:text-primary transition-colors relative px-2 py-1 cursor-pointer"
-            href="/lab"  // Use onClick to trigger navigation
+            href="/lab"
           >
             <span className="relative z-10">Lab</span>
           </Link>
@@ -89,8 +96,8 @@ const Navbar = () => {
             href="https://docs.google.com/document/d/1lWpjDMwipEqvqEPHT4k2PpzNxO7KA0zXCZ36K1huH04/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex gap-1.5 px-6 py-3 bg-primary bg-opacity-80 text-white rounded-xl hover:bg-opacity-70 hover:bg-blue-800 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] duration-500 font-semibold shadow-md"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+            className="group relative flex gap-1.5 px-3 py-2 bg-primary bg-opacity-80 text-white rounded-full hover:bg-opacity-70 hover:bg-neutral-700 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(0,0,0,0.4)] duration-500 font-semibold shadow-md"
+            style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.5)' }}
           >
             Resume
           </a>
