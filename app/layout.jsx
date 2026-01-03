@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://sulochanmahajan.com/"), // 👈 REQUIRED
+  metadataBase: new URL("https://sulochanmahajan.com/"),
 
   title: {
     default: "Sulochan Mahajan | MERN Stack Developer",
