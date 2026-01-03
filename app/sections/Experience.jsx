@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
     return (
-        <section id="experience" className=' w-full flex flex-col justify-center items-center p-6 text-[12px] md:text-[18px] shadow-[inset_1px_2px_8px_1px_rgba(0,0,0,0.3),inset_-1px_-2px_8px_2px_rgb(255,255,255,0.5)]'>
+        <section id="experience" className=' w-full flex flex-col justify-center items-center p-6 text-[12px] md:text-[18px] shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
             <h2 className='headings'>Work Experience</h2>
             <section className="rounded-xl p-8 hover:-translate-y-1 transition-all w-full ">
                 <div className="space-y-4 text-content">

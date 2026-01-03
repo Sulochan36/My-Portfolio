@@ -4,7 +4,7 @@ import { projects } from '../projects.js'
 
 const Projects = () => {
     return (
-        <section id="projects" className='w-full flex flex-col justify-center items-center p-6 shadow-[inset_1px_2px_8px_1px_rgba(0,0,0,0.3),inset_-1px_-2px_8px_2px_rgb(255,255,255,0.5)] '>
+        <section id="projects" className='w-full flex flex-col justify-center items-center p-6 shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
             <h2 className='headings'>Projects</h2>
             <div className="max-w-full">
                 {/* <hr className="mb-8 mt-4 h-px border-0 bg-blue-500"></hr> */}

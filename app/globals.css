@@ -83,6 +83,4 @@ ul li::before {
   text-shadow: var(--shadow-text-shadow);
 }
 
-.partition{
-  @apply w-full h-[4px] bg-neutral-300 inset-shadow-2xs inset-shadow-neutral-800 dark:inset-shadow-black shadow-xl shadow-neutral-800
-}
+
