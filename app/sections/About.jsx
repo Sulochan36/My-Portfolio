@@ -14,7 +14,7 @@ const About = () => {
 
     return (
         
-        <section id="about" className='w-full flex flex-col p-8 text-justify items-center whitespace-wrap text-[14px] md:text-[18px] shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
+        <section id="about" className='w-full flex flex-col px-20 py-8 text-justify items-center whitespace-wrap text-[14px] md:text-[18px] shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
             <h2 className='headings'>About Me</h2>
             <div className='flex flex-col flex-wrap gap-x-5 lg:flex-nowrap '>
             

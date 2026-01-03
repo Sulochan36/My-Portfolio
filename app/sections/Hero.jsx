@@ -5,10 +5,10 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full flex flex-col flex-wrap px-8 py-15 tracking-tight shadow-[inset_0_-4px_3px_0_rgb(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
+        <section id="home" className='w-full flex flex-col flex-wrap pl-25 py-15 tracking-tight shadow-[inset_0_-4px_3px_0_rgb(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
 
             <p  className='lg:text-xl text-xl text-primary text-left font-semibold'>Hi , my name is,</p>
-            <h1 className='lg:text-5xl md:text-3xl text-[25px] my-5 text-left min-w-0.5 text-heading font-bold text-shadow'>Sulochan Mahajan</h1>
+            <h1 className='lg:text-5xl md:text-3xl text-[25px] my-5 text-left min-w-0.5 text-heading font-semibold text-shadow'>Sulochan Mahajan</h1>
             <p className="text-content text-lg mb-8 text-justify text-wrap max-w-2xl text-[12px] md:text-[16px]">
                 I’m a <RoleBadge /> focused on creating clean, efficient, and user-friendly web applications. As a fresher, I’m ready to bring my skills, adapt quickly, and contribute to impactful projects.
             </p>

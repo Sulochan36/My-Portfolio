@@ -40,7 +40,7 @@ const Navbar = () => {
         duration : 0.2,
         ease : easeInOut,
       }}
-        className='backdrop-blur-2xl fixed inset-x-0 top-0 mx-auto mt-2 flex max-w-4xl justify-between items-center py-2 z-10 rounded-full px-3'
+        className='backdrop-blur-md fixed inset-x-0 top-0 mx-auto mt-2 flex max-w-4xl justify-between items-center py-2 z-10 rounded-full px-3'
       
       >
         
@@ -51,7 +51,7 @@ const Navbar = () => {
             src="/propic.jpg"
             width={100}
             height={100}
-            className='w-12 h-12 object-fit rounded-full shadow-md shadow-neutral-600'
+            className='w-12 h-12 object-fit rounded-full shadow-md shadow-neutral-600 ring-1 ring-primary'
             alt='Profile Pic'
           />
           
@@ -72,13 +72,13 @@ const Navbar = () => {
                 href={`/#${item.toLowerCase()}`}
                 onMouseEnter={()=>setHovered(item)}
                 onMouseLeave={()=>setHovered(null)}
-                className="text-text hover:text-primary transition-colors relative px-2 py-1 "
+                className="text-text/70 hover:text-primary font-semibold transition-colors relative px-2 py-1 duration-300 "
               >
                 <span className='relative z-10'>{item}</span>
               </Link>
             ))}
           <Link
-            className="text-text hover:text-primary transition-colors relative px-2 py-1 cursor-pointer"
+            className="text-text/70 hover:text-primary font-semibold transition-colors relative px-2 py-1 cursor-pointer duration-300"
             href="/lab"
           >
             <span className="relative z-10">Lab</span>
@@ -96,8 +96,8 @@ const Navbar = () => {
             href="https://docs.google.com/document/d/1lWpjDMwipEqvqEPHT4k2PpzNxO7KA0zXCZ36K1huH04/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex gap-1.5 px-3 py-2 bg-primary bg-opacity-80 text-white rounded-full hover:bg-opacity-70 hover:bg-neutral-700 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(0,0,0,0.4)] duration-500 font-semibold shadow-md"
-            style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.5)' }}
+            className="group relative flex gap-1.5 px-3 py-2 bg-transparent ring-1 ring-primary/80 hover:ring-2 hover:ring-primary bg-opacity-80 text-primary rounded-full hover:bg-opacity-50 hover:bg-primary/30 hover:-translate-y-0.5 hover:shadow-[0_0_10px_rgba(0,0,0,0.2)] duration-300 font-medium"
+            style={{ textShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)' }}
           >
             Resume
           </a>
