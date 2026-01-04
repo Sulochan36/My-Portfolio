@@ -4,21 +4,27 @@ export function cn(...args) {
     return clsx(...args);
 }
 
-export const normalize = (str) => str.toLowerCase().replace(/[\s.]/g, '');
+// normalize tech names like "Next.js", "Socket IO", "Node JS"
+export const normalize = (str = '') =>
+    str.toLowerCase().replace(/[\s.]/g, '');
 
+// Iconify icon map (scalable, no local assets)
 export const techIconMap = {
-    react: '/tech-icons/react.png',
-    nextjs: '/tech-icons/nextjs2.png',
-    tailwindcss: '/tech-icons/tailwindcss.png',
-    shadcnui: '/tech-icons/shadcnui.png',
-    javascript: '/tech-icons/js.png',
-    mongodb: '/tech-icons/mongodb.png',
-    expressjs: '/tech-icons/expressjs.png',
-    nodejs: '/tech-icons/nodejs.png',
-    socketio: '/tech-icons/socketio.png',
-    jwt: '/tech-icons/jwt.png',
-    zustand: '/tech-icons/zustand.png',
-    daisyui: '/tech-icons/daisyui.png',
-    localstorage: '/tech-icons/localstorage.png',
-    framer: '/tech-icons/framer.png',
+    react: 'logos:react',
+    nextjs: 'logos:nextjs-icon',
+    tailwindcss: 'logos:tailwindcss-icon',
+    shadcnui: 'simple-icons:shadcnui',
+    javascript: 'logos:javascript',
+    mongodb: 'logos:mongodb-icon',
+    expressjs: 'simple-icons:express',
+    nodejs: 'logos:nodejs-icon',
+    socketio: 'simple-icons:socketdotio',
+    jwt: 'simple-icons:jsonwebtokens',
+    zustand: 'simple-icons:zustand',
+    daisyui: 'simple-icons:daisyui',
+    localstorage: 'mdi:database-outline',
+    framer: 'simple-icons:framer',
 };
+
+// Fallback icon (very important)
+export const DEFAULT_TECH_ICON = 'mdi:help-circle-outline';
