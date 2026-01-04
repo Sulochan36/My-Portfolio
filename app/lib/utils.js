@@ -20,7 +20,7 @@ export const techIconMap = {
     nodejs: 'logos:nodejs-icon',
     socketio: 'simple-icons:socketdotio',
     jwt: 'simple-icons:jsonwebtokens',
-    zustand: 'simple-icons:zustand',
+    zustand: 'devicon:zustand',
     daisyui: 'simple-icons:daisyui',
     localstorage: 'mdi:database-outline',
     framer: 'simple-icons:framer',
