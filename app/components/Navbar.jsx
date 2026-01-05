@@ -3,93 +3,85 @@
 import React, { useState } from 'react';
 import Container from './Container';
 import Link from 'next/link';
-import { easeInOut, motion, useMotionValueEvent, useScroll } from "motion/react"
+import { easeInOut, motion, useMotionValueEvent, useScroll } from "motion/react";
 import DarkToggle from './DarkToogle';
 import Image from 'next/image';
 
-const navItems = ['Home', 'About', 'Projects', 'Contact'];
+// Define the navigation items, including 'Lab'
+const navItems = [
+  { label: 'Home', href: '/#home' }, // For anchor links on the same page
+  { label: 'About', href: '/#about' }, // For anchor links on the same page
+  { label: 'Projects', href: '/#projects' }, // For anchor links on the same page
+  { label: 'Contact', href: '/#contact' }, // For anchor links on the same page
+  { label: 'Lab', href: '/lab' }, // The Lab page link
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll();
 
-
-  useMotionValueEvent(scrollY , "change", (latest) => {
-    if(latest > 20 ){
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 20) {
       setScrolled(true);
-    }
-    else{
+    } else {
       setScrolled(false);
     }
-  })
+  });
 
-  const handleToggleMenu = () => setIsOpen(prev => !prev);
+  const handleToggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
   return (
     <Container className="bg-container-background">
       <motion.nav
-      animate = {{
-          boxShadow: scrolled ? "var(--shadow-navbar) " : "none",
+        animate={{
+          boxShadow: scrolled ? "var(--shadow-navbar)" : "none",
           width: scrolled ? "80%" : "100%",
-          y : scrolled ? 10 : 0,
-      }}
-      transition={{
-        duration : 0.2,
-        ease : easeInOut,
-      }}
-        className='backdrop-blur-md fixed inset-x-0 top-0 mx-auto mt-2 flex md:max-w-4xl w-full justify-between items-center py-2 z-10 rounded-full px-3'
-      
+          y: scrolled ? 10 : 0,
+        }}
+        transition={{
+          duration: 0.2,
+          ease: easeInOut,
+        }}
+        className="backdrop-blur-md fixed inset-x-0 top-0 mx-auto mt-2 flex md:max-w-4xl w-full justify-between items-center py-2 z-10 rounded-full px-3"
       >
-        
+        {/* Logo */}
+        <Image
+          src="/propic.jpg"
+          width={100}
+          height={100}
+          className="w-12 h-12 object-fit rounded-full shadow-md shadow-neutral-600 ring-1 ring-primary"
+          alt="Profile Pic"
+        />
 
-          {/* Logo */}
-        
-          <Image
-            src="/propic.jpg"
-            width={100}
-            height={100}
-            className='w-12 h-12 object-fit rounded-full shadow-md shadow-neutral-600 ring-1 ring-primary'
-            alt='Profile Pic'
-          />
-          
+        {/* Hamburger Icon (Mobile) */}
+        <div
+          className="w-7 h-5 cursor-pointer z-40 md:hidden text-text text-3xl flex items-center justify-between"
+          onClick={handleToggleMenu}
+        >
+          &#9776;
+        </div>
 
-          {/* Hamburger Icon (Mobile) */}
-          <div
-            className="w-7 h-5 cursor-pointer z-40 md:hidden text-text text-3xl flex items-center justify-between"
-            onClick={handleToggleMenu}
-          >
-            &#9776;
-          </div>
+        {/* Desktop Navigation */}
+        <div className="hidden flex-col md:flex-row md:flex items-center gap-0.5">
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onMouseEnter={() => setHovered(item.label)}
+              onMouseLeave={() => setHovered(null)}
+              className="text-text/70 hover:text-primary font-semibold transition-colors relative px-2 py-1 duration-300"
+            >
+              <span className="relative z-10">{item.label}</span>
+            </Link>
+          ))}
+        </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-0.5">
-            {navItems.map((item) => (
-              <Link
-                key={item}
-                href={`/#${item.toLowerCase()}`}
-                onMouseEnter={()=>setHovered(item)}
-                onMouseLeave={()=>setHovered(null)}
-                className="text-text/70 hover:text-primary font-semibold transition-colors relative px-2 py-1 duration-300 "
-              >
-                <span className='relative z-10'>{item}</span>
-              </Link>
-            ))}
-          <Link
-            className="text-text/70 hover:text-primary font-semibold transition-colors relative px-2 py-1 cursor-pointer duration-300"
-            href="/lab"
-          >
-            <span className="relative z-10">Lab</span>
-          </Link>
-          
-          </div>
-
-          <div className='flex flex-row flex-wrap justify-center items-center gap-3 z-10'>
-            {/* Dark Toogle */}
-
-            <DarkToggle/>
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 z-10">
+          {/* Dark Toggle */}
+          <DarkToggle />
 
           {/* Resume Button */}
           <a
@@ -101,33 +93,39 @@ const Navbar = () => {
           >
             Resume
           </a>
-          </div>
-          
-          
-
-          
-      
+        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 flex flex-col gap-4 text-text bg-transparent p-4 rounded-md transition-all duration-700 ease-in-out">
+          <div className="absolute
+      top-full
+      left-0
+      w-full
+      mt-3
+      md:hidden
+      flex
+      flex-col
+      gap-4
+      text-center
+      bg-container-background/90
+      backdrop-blur-md
+      py-4
+      rounded-2xl
+      shadow-lg">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 onClick={closeMenu}
                 className="text-lg hover:text-blue-400 transition"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
         )}
-
       </motion.nav>
     </Container>
-      
-    
   );
 };
 
