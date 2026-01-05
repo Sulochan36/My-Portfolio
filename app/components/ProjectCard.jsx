@@ -41,7 +41,7 @@ const ProjectCard = ({ data }) => {
 
             <div className='transition-transform duration-300 group-hover:scale-y-[1.05]'>
                 <a href="#">
-                    <img className="w-full h-64 rounded-xl object-cover transition-normal duration-300" src={cover} alt="" />
+                    <img className="w-full md:h-64 h-48 rounded-xl object-cover transition-normal duration-300" src={cover} alt="" />
                 </a>
             </div>
             

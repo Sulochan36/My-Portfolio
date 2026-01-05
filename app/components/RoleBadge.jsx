@@ -22,7 +22,7 @@ const RoleBadge = () => {
 
     return (
         <>
-            <span className='border-[2px] border-neutral-700 inline-block px-2 py-0.5 w-[200px] items-center justify-center rounded-2xl bg-transparent transition duration-500 shadow shadow-neutral-500 '>
+            <span className='border-[2px] border-neutral-400 inline-block px-2 py-0.5 w-fit items-center justify-center rounded-2xl bg-transparent transition-all duration-500'>
                 <span className={` font-bold transition-opacity translate-y-10 duration-500 ${fade ? ' opacity-100' : 'opacity-0'
                     }`}>
                     {roles[currentRoleIndex]}

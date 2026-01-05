@@ -4,9 +4,9 @@ import {workExperience} from '../workExperience.js';
 
 const Experience = () => {
     return (
-        <section id="experience" className=' w-full flex flex-col justify-center items-center px-15 py-8 shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
+        <section id="experience" className=' w-full flex flex-col px-8 md:px-20 py-8 text-justify items-center text-[14px] md:text-[16px] dark:text-neutral-200 shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
             <h2 className='headings'>Work Experience</h2>
-            <section className="rounded-xl p-8 hover:-translate-y-1 transition-all w-full ">
+            <section className="rounded-xl md:p-8 hover:-translate-y-1 transition-all w-full ">
                 <div className="space-y-4 text-content">
 
                     <div className="flex flex-col gap-8">

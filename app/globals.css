@@ -12,7 +12,6 @@
   --color-primary: #155dfc;
   --color-text: #000000;
   --color-section: #8a8a8a;
-  --shadow-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
   --font-sans: var(--font-inter);
   --shadow-navbar: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
@@ -26,7 +25,6 @@
     --color-primary: #155dfc;
     --color-text: #ffffff;
     --color-section: #5e5e5e;
-    --shadow-text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
     --font-sans: var(--font-inter);
     --shadow-navbar: 0px 3px 6px rgba(255, 255, 255, 0.3) ;
   }
@@ -46,10 +44,7 @@ body {
 }
 
 .headings {
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--color-heading);
-  text-shadow: var(--shadow-text-shadow);
+  @apply md:text-[30px] text-[26px] font-bold text-heading text-shadow-[0px_1px_2px_rgba(0,0,0,0.5)] dark:text-shadow-[1px_2px_4px_rgba(255,255,255,0.5)]
 }
 
 .subheading {

@@ -5,12 +5,12 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full flex flex-col flex-wrap pl-25 py-15 tracking-tight shadow-[inset_0_-4px_3px_0_rgb(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
+        <section id="home" className='w-full flex flex-col flex-wrap md:pl-25 md:py-15 px-8 py-5 tracking-tight shadow-[inset_0_-4px_3px_0_rgb(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
 
             <p  className='lg:text-xl text-xl text-primary text-left font-semibold'>Hi , my name is,</p>
-            <h1 className='lg:text-5xl md:text-3xl text-[25px] my-5 text-left min-w-0.5 text-heading font-semibold text-shadow'>Sulochan Mahajan</h1>
-            <p className="text-content text-lg mb-8 text-justify text-wrap max-w-2xl text-[12px] md:text-[16px]">
-                I’m a <RoleBadge /> focused on creating clean, efficient, and user-friendly web applications. As a fresher, I’m ready to bring my skills, adapt quickly, and contribute to impactful projects.
+            <h1 className='lg:text-5xl md:text-3xl text-[25px] my-2 text-left min-w-0.5 text-heading font-semibold text-shadow'>Sulochan Mahajan</h1>
+            <p className="text-content mb-8 text-justify text-wrap max-w-2xl text-[14px] md:text-[16px]">
+                I’m a <RoleBadge /> <br/> focused on creating clean, efficient, and user-friendly web applications. As a fresher, I’m ready to bring my skills, adapt quickly, and contribute to impactful projects.
             </p>
 
             {/* CTA Buttons */}
@@ -18,14 +18,14 @@ const Hero = () => {
             <div className="flex flex-wrap space-x-4">
                 <a
                     href="#projects"
-                    className="bg-primary text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:bg-blue-800 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] duration-500 text-center"
+                    className="bg-primary text-white md:py-3 md:px-6 px-2 py-1 rounded font-medium transition relative overflow-hidden hover:bg-blue-800 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] duration-500 text-center"
                 >
                     View Projects
                 </a>
                 <a
                     href="#contact"
-                    className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-500 
-                    hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10 text-center"
+                    className="border border-primary text-blue-500 md:py-3 md:px-6 px-2 py-1 rounded font-medium transition-all duration-500 
+                    hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-primary/10 text-center"
                 >
                     Contact Me
                 </a>

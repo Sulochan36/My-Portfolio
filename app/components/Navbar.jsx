@@ -33,14 +33,14 @@ const Navbar = () => {
       <motion.nav
       animate = {{
           boxShadow: scrolled ? "var(--shadow-navbar) " : "none",
-          width: scrolled ? "60%" : "100%",
+          width: scrolled ? "80%" : "100%",
           y : scrolled ? 10 : 0,
       }}
       transition={{
         duration : 0.2,
         ease : easeInOut,
       }}
-        className='backdrop-blur-md fixed inset-x-0 top-0 mx-auto mt-2 flex max-w-4xl justify-between items-center py-2 z-10 rounded-full px-3'
+        className='backdrop-blur-md fixed inset-x-0 top-0 mx-auto mt-2 flex md:max-w-4xl w-full justify-between items-center py-2 z-10 rounded-full px-3'
       
       >
         
@@ -58,7 +58,7 @@ const Navbar = () => {
 
           {/* Hamburger Icon (Mobile) */}
           <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden text-white text-3xl"
+            className="w-7 h-5 cursor-pointer z-40 md:hidden text-text text-3xl flex items-center justify-between"
             onClick={handleToggleMenu}
           >
             &#9776;
@@ -110,7 +110,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 flex flex-col gap-4 text-white bg-black bg-opacity-80 p-4 rounded-md shadow-lg transition-all duration-700 ease-in-out">
+          <div className="md:hidden mt-4 flex flex-col gap-4 text-text bg-transparent p-4 rounded-md transition-all duration-700 ease-in-out">
             {navItems.map((item) => (
               <a
                 key={item}
