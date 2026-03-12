@@ -1,0 +1,19 @@
+```mdx
+---
+title: "useEffect Common Mistakes"
+tags: ["react", "hooks", "useEffect"]
+description: "Things to avoid while using useEffect"
+---
+
+## Mistakes
+
+1. Forgetting dependencies
+2. Updating state incorrectly
+3. Causing infinite loops
+
+### Correct Usage
+
+```js
+useEffect(() => {
+  fetchData()
+}, [])

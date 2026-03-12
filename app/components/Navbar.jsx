@@ -9,11 +9,11 @@ import Image from 'next/image';
 
 // Define the navigation items, including 'Lab'
 const navItems = [
-  { label: 'Home', href: '/#home' }, // For anchor links on the same page
-  { label: 'About', href: '/#about' }, // For anchor links on the same page
-  { label: 'Projects', href: '/#projects' }, // For anchor links on the same page
-  { label: 'Contact', href: '/#contact' }, // For anchor links on the same page
-  { label: 'Lab', href: '/lab' }, // The Lab page link
+  { label: 'Home', href: '/#home' },
+  { label: 'About', href: '/#about' }, 
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Contact', href: '/#contact' }, 
+  { label: 'MyStudio', href: '/studio' }, 
 ];
 
 const Navbar = () => {

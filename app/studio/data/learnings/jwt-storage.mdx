@@ -1,0 +1,15 @@
+---
+title: "JWT Storage in Browser"
+tags: ["auth", "jwt", "security"]
+description: "Best practices for storing JWT tokens"
+---
+
+## Options
+
+- LocalStorage (not secure)
+- SessionStorage (better, cleared on close)
+- HttpOnly Cookies (most secure)
+
+### Recommendation
+
+Use HttpOnly cookies whenever possible.

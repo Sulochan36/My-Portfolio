@@ -1,0 +1,14 @@
+---
+title: "Suspense Streaming"
+tags: ["react", "concurrent", "suspense"]
+description: "Testing React Suspense with streaming content"
+---
+
+## Suspense Experiment
+
+We can stream components using React Suspense:
+
+```js
+<Suspense fallback={<Loader />}>
+    <AsyncComponent />
+</Suspense>
