@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -7,9 +7,9 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import Container from "./components/Container";
 
 
-const inter = Inter({
+const geist_mono = Geist_Mono({
   subsets: ["latin"],
-  weight : ["400" , "500" , "600" , "700" , "800" , "900"]
+  weight : ["400" , "500" , "600" , "700", "800", "900"]
 });
 
 export const metadata = {
@@ -53,10 +53,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased`}
+        className={`${geist_mono.className} antialiased scroll-smooth`}
       >
         <div className="flex flex-grow min-h-screen flex-col">
-          <Container className='min-h-screen bg-container-background rounded-2xl border-[4px] border-black/10 dark:white/10 '>
+          <Container className='min-h-screen bg-container-background border-[4px] border-black/10 dark:border-white/10 '>
             <Navbar />
             <div className="min-h-screen mt-20">
               {children}

@@ -1,0 +1,403 @@
+---
+title: "Understanding Variables and Data Types in JavaScript"
+description: "Learn javascript variables and data types."
+cover: "/studio/blogs/datatypes.png"
+tags:
+    - Javascript
+    - Web Development
+
+date: "2026-03-14"
+type: "blogs"
+---
+
+## Introduction
+
+When we start learning JavaScript, one of the first concepts we encounter is **variables** and **data types**. These form the **foundation of programming**, and understanding them well makes everything else easier.
+
+In this article, we’ll cover:
+
+* What variables are
+* Why we need them
+* `var`, `let`, and `const`
+* Primitive data types
+* Scope (explained simply)
+
+---
+
+## What Are Variables?
+
+A **variable** is like a **box that stores information**.
+
+Think of it like labeling containers in real life:
+
+| Variable  | Value   |
+| --------- | ------- |
+| name      | "Rahul" |
+| age       | 21      |
+| isStudent | true    |
+
+### Example
+
+```javascript
+let name = "Rahul";
+let age = 21;
+let isStudent = true;
+```
+
+👉 A variable = **name + stored value**
+
+---
+
+## Why Do We Need Variables?
+
+Without variables, code becomes repetitive and hard to maintain.
+
+### ❌ Without variables
+
+```javascript
+console.log("Rahul");
+console.log("Rahul");
+console.log("Rahul");
+```
+
+### ✅ With variables
+
+```javascript
+let name = "Rahul";
+
+console.log(name);
+console.log(name);
+console.log(name);
+```
+
+Now updating becomes easy:
+
+```javascript
+name = "Aman";
+```
+
+✔ Cleaner
+✔ Maintainable
+✔ Scalable
+
+---
+
+## Declaring Variables
+
+JavaScript provides three ways:
+
+```javascript
+var city = "Indore";
+let age = 22;
+const country = "India";
+```
+
+We’ll compare them later. First, let’s understand **data types**.
+
+---
+
+## What Are Data Types?
+
+A **data type** defines the **kind of value** a variable holds.
+
+Examples:
+
+* `"Rahul"` → String
+* `25` → Number
+* `true` → Boolean
+
+JavaScript uses this information to perform operations correctly.
+
+---
+
+## Primitive Data Types
+
+The most common types:
+
+* String
+* Number
+* Boolean
+* Null
+* Undefined
+
+---
+
+## 1. String
+
+A **string** represents text and is written inside quotes.
+
+```javascript
+let name = "Rahul";
+let city = 'Indore';
+```
+
+### Important Notes
+
+* Strings inside quotes are always text:
+
+```javascript
+let value = "25"; // string, not number
+```
+
+* Strings are **immutable**:
+
+```javascript
+let text = "Hello";
+text = text + " World";
+```
+
+👉 A new string is created instead of modifying the old one.
+
+### ❗ Edge Case
+
+```javascript
+let word = "Coding";
+word[0] = "c";
+
+console.log(word); // Coding
+```
+
+Strings cannot be modified character-by-character.
+
+---
+
+## 2. Number
+
+Represents numeric values:
+
+```javascript
+let age = 25;
+let price = 99.99;
+```
+
+Supports:
+
+* Integers → `10`
+* Decimals → `3.14`
+* Negatives → `-5`
+
+### Special Case: NaN
+
+```javascript
+console.log("abc" / 2); // NaN
+```
+
+👉 **NaN = Not a Number**
+
+---
+
+## 3. Boolean
+
+Represents **true or false**.
+
+```javascript
+let isLoggedIn = true;
+let isAdmin = false;
+```
+
+### Example
+
+```javascript
+if (isLoggedIn) {
+  console.log("Welcome!");
+}
+```
+
+Used for **decision making**.
+
+---
+
+## 4. Null
+
+Represents an **intentional empty value**.
+
+```javascript
+let user = null;
+```
+
+Later:
+
+```javascript
+user = "Rahul";
+```
+
+### ⚠️ Interesting Fact
+
+```javascript
+typeof null // "object" (known JS bug)
+```
+
+---
+
+## 5. Undefined
+
+A variable declared but not assigned:
+
+```javascript
+let age;
+
+console.log(age); // undefined
+```
+
+---
+
+## Null vs Undefined
+
+| Value     | Meaning             |
+| --------- | ------------------- |
+| null      | intentionally empty |
+| undefined | not assigned yet    |
+
+---
+
+## var vs let vs const
+
+## 1. var (Old way)
+
+```javascript
+var name = "Rahul";
+```
+
+* Can redeclare
+* Function scoped
+* Avoid in modern JS
+
+---
+
+## 2. let (Recommended)
+
+```javascript
+let age = 21;
+age = 22;
+```
+
+✔ Can update
+✔ Block scoped
+
+---
+
+## 3. const (Most strict)
+
+```javascript
+const country = "India";
+```
+
+❌ Cannot reassign
+
+---
+
+## ⚠️ Important Edge Case
+
+```javascript
+const user = {
+  name: "Rahul"
+};
+
+user.name = "Aman"; // ✅ allowed
+```
+
+👉 Object content can change, but reference cannot.
+
+---
+
+## Comparison Table
+
+| Feature      | var      | let    | const       |
+| ------------ | -------- | ------ | ----------- |
+| Redeclare    | Yes      | No     | No          |
+| Update value | Yes      | Yes    | No          |
+| Scope        | Function | Block  | Block       |
+| Usage        | Rare     | Common | Very Common |
+
+---
+
+## What Is Scope?
+
+**Scope = where variables can be accessed**
+
+### Analogy
+
+* Global = accessible everywhere
+* Local = limited to a block/function
+
+---
+
+## Example
+
+```javascript
+let name = "Rahul";
+
+function greet() {
+  let message = "Hello";
+  console.log(message);
+}
+
+console.log(name);
+```
+
+❌ This will fail:
+
+```javascript
+console.log(message); // Error
+```
+
+---
+
+## Updating Variables
+
+```javascript
+let score = 10;
+
+score = 20;
+score = 30;
+```
+
+But with `const`:
+
+```javascript
+const pi = 3.14;
+pi = 3.14159; // Error
+```
+
+---
+
+## Practical Example
+
+```javascript
+let name = "Rahul";
+let age = 22;
+let isStudent = true;
+
+console.log(name);
+console.log(age);
+console.log(isStudent);
+```
+
+---
+
+## Summary
+
+* Variables store data
+* Use `let` and `const` in modern JavaScript
+* Primitive types:
+
+  * string
+  * number
+  * boolean
+  * null
+  * undefined
+* `const` prevents reassignment
+* Scope controls accessibility
+
+---
+
+## Final Thoughts
+
+Mastering variables and data types builds a strong foundation for:
+
+* Arrays
+* Objects
+* Functions
+* Advanced JavaScript
+
+Once you're comfortable with these concepts, everything else becomes much easier 🚀

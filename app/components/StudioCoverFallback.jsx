@@ -19,7 +19,7 @@ export default function StudioCoverFallback({ title }) {
 
     return (
         <div
-            className={`w-full md:h-64 h-48 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-center px-4`}
+            className={`w-auto md:h-[340px] h-[340px] rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-center px-4`}
         >
             <h3 className="text-white text-xl md:text-2xl font-bold tracking-tight drop-shadow-md">
                 {title}

@@ -6,7 +6,7 @@ import StudioCard from '@/app/components/StudioCard'
 export default async function TypePage({ params }) {
     const { type } = await params
 
-    const allItems = getAllStudioItems()
+    const allItems = await getAllStudioItems()
     const items = allItems.filter(i => i.type === type)
 
     if (!items.length) {

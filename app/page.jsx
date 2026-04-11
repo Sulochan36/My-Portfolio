@@ -4,7 +4,7 @@ import About from './sections/About'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
-import SocialLinks from './components/SocialLinks'
+import Blogs from './sections/Blogs'
 
 
 const page = () => {
@@ -15,6 +15,7 @@ const page = () => {
       <Projects />
       <Experience />
       <About/>
+      <Blogs/>
       <Contact/>
       
     </div>
