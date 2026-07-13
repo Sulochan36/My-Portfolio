@@ -18,7 +18,7 @@ This is my personal portfolio website built with **NextJS** and styled using **T
 
 ## 🚀 Live Demo
 
-👉 [Visit my portfolio here](https://sulochan-mahajan.vercel.app/)
+👉 [Visit my portfolio here](https://sulochanmahajan.com)
 
 ## 📷 Preview
 
