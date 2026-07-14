@@ -20,7 +20,7 @@ const Hero = () => {
                     <span className='inline-flex size-2 rounded-full bg-green-500'></span>
                 </span>
 
-                Currently I am working on a personal project - <i className='underline'>Auxizon</i>
+                Currently Learning, Building and Exploring
             </p>
             
 

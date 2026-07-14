@@ -16,7 +16,7 @@ export const metadata = {
   metadataBase: new URL("https://sulochanmahajan.com/"),
 
   title: {
-    default: "Sulochan Mahajan | MERN Stack Developer",
+    default: "Sulochan Mahajan | Full Stack Developer",
     template: "%s | Sulochan Mahajan",
   },
 
@@ -24,7 +24,7 @@ export const metadata = {
     "MERN Stack & Next.js developer building full-stack web apps. Open to remote internships and roles.",
 
   openGraph: {
-    title: "Sulochan Mahajan | MERN Stack Developer",
+    title: "Sulochan Mahajan | Full Stack Developer",
     description:
       "Portfolio of Sulochan Mahajan, a MERN Stack & Next.js developer. Open to remote internships and jobs.",
     url: "/",

@@ -1,5 +1,4 @@
 import React from 'react'
-import { getAllStudioItems } from '../studio/lib/getAllStudio'
 import StudioCard from '../components/StudioCard'
 import Link from 'next/link'
 import { getLocalStudioItems } from '../studio/lib/getLocalStudioItems'
@@ -8,6 +7,8 @@ const Projects = () => {
 
     const allItems = getLocalStudioItems()
     const items = allItems.filter(i => i.type === 'projects')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 4)
 
     return (
         <section id="projects" className='w-full flex flex-col justify-center items-center md:px-20 md:py-8 px-10 py-4 shadow-[inset_0_-4px_3px_0_rgba(0,0,0,0.1)] dark:shadow-[inset_0_-4px_3px_0_rgb(255,255,255,0.1)]'>
