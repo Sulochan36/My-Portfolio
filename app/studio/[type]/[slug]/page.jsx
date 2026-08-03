@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { getStudioBySlug } from "../../lib/getStudioBySlug"
+import { useMDXComponents } from "@/mdx-components";
+import remarkGfm from "remark-gfm";
 
 export async function generateMetaData({params}) {
     const { type, slug } = await params
@@ -41,8 +43,16 @@ export default async function StudioPage({params}) {
                 </div>
             </header>
 
-            <div className="prose prose-sm md:prose-mase lg:prose-lg prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-h2:mt-12 prose-h3:mt-8 prose-p:text-[17px] prose-p:leading-7 prose-li:leading-7 prose-pre:rounded-xl prose-img:rounded-2xl prose-pre:overflow-x-auto prose-img:shadow-lg prose-pre:shadow-lg prose-pre:border prose-pre:border-neutral-200 dark:prose-pre:border-neutral-800 mb-8">
-                <MDXRemote source={studio.content} />
+            <div className="prose prose-sm md:prose-base lg:prose-lg prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-h2:mt-12 prose-h3:mt-8 prose-p:text-[17px] prose-p:leading-7 prose-li:leading-7 prose-pre:rounded-xl prose-img:rounded-2xl prose-pre:overflow-x-auto prose-img:shadow-lg prose-pre:shadow-lg prose-pre:border prose-pre:border-neutral-200 dark:prose-pre:border-neutral-800 mb-8">
+                <MDXRemote
+                    source={studio.content}
+                    components={useMDXComponents()}
+                    options={{
+                        mdxOptions: {
+                            remarkPlugins: [remarkGfm],
+                        },
+                    }}
+                />
             </div>
         </article>
     )

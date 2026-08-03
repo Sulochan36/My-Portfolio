@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 const RoleBadge = () => {
 
-    const roles = ["Frontend Developer" , "Fullstack Developer" , "Software Engineer"]
+    const roles = ["Frontend Developer", "Fullstack Developer", "UI Engineer", "Software Engineer"]
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [fade, setFade] = useState(true);
 

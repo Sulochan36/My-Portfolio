@@ -11,7 +11,7 @@ const Hero = () => {
             <p  className='lg:text-xl text-xl text-primary text-left font-semibold'>Hi , my name is,</p>
             <h1 className='lg:text-4xl md:text-3xl text-[25px] my-2 text-left min-w-0.5 text-heading font-semibold text-shadow'>Sulochan Mahajan</h1>
             <p className="text-content mb-2 font-medium  text-justify text-wrap max-w-2xl text-[14px] md:text-[16px]">
-                I’m a <RoleBadge /> <br/> focused on creating clean, efficient, and user-friendly web applications. As a fresher, I’m ready to bring my skills, adapt quickly, and contribute to impactful projects.
+                I’m a <RoleBadge /> <br /> focused on building fast, scalable, and user-friendly web applications. I enjoy transforming ideas into polished digital experiences through clean code, thoughtful design, and smooth interactions.
             </p>
 
             <p className='dark:text-green-500 text-green-600 font-semibold mb-5 bg-neutral-200/60 dark:bg-neutral-700/50 backdrop-blur-2xl w-fit px-4 py-2 rounded shadow-[2.0px_3.0px_3.0px_rgba(0,0,0,0.38)] dark:shadow-[2.0px_3.0px_3.0px_rgba(255,255,255,0.38)] '>

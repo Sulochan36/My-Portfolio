@@ -4,21 +4,31 @@ import { Icon } from '@iconify/react';
 const About = () => {
     const frontendSkills = [
         { name: "React", icon: "logos:react" },
+        { name: "Next.js", icon: "logos:nextjs-icon" },
+        { name: "TypeScript", icon: "logos:typescript-icon" },
         { name: "JavaScript", icon: "logos:javascript" },
-        { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-        { name: "NextJS", icon: "logos:nextjs-icon" },
+        { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+        { name: "Motion", icon: "bxl:motion-js" },
+        { name: "Shadcn/UI", icon: "simple-icons:shadcnui" },
     ];
 
     const backendSkills = [
         { name: "Node.js", icon: "logos:nodejs-icon" },
-        { name: "ExpressJS", icon: "simple-icons:express" },
+        { name: "Express.js", icon: "simple-icons:express" },
         { name: "MongoDB", icon: "logos:mongodb-icon" },
+        { name: "Redis", icon: "logos:redis" },
+        { name: "WebSockets", icon: "mdi:web" },
+        { name: "Clerk", icon: "simple-icons:clerk" },
     ];
 
-    const others = [
-        { name: "UI/UX Design", icon: "mdi:palette" },
+    const toolsAndTechnologies = [
         { name: "Git", icon: "logos:git-icon" },
-        { name: "REST API", icon: "mdi:api" },
+        { name: "Docker", icon: "logos:docker-icon" },
+        { name: "Prisma", icon: "material-icon-theme:prisma" },
+        { name: "TanStack Query", icon: "simple-icons:reactquery" },
+        { name: "Zustand", icon: "devicon:zustand" },
+        { name: "REST APIs", icon: "mdi:api" },
+        { name: "Generative AI", icon: "mdi:robot-outline" },
         { name: "Performance Optimization", icon: "mdi:speedometer" },
     ];
 
@@ -32,18 +42,28 @@ const About = () => {
             {/* Intro Text */}
             <div className="max-w-3xl space-y-4">
                 <p>
-                    Hi, I'm a <strong>frontend developer</strong> passionate about blending <strong>creativity</strong> with{' '}
-                    <strong>problem-solving</strong> to craft engaging web experiences. My journey began before B.Tech, and I’ve since
-                    explored the <strong>MERN stack</strong> to build modern, user-friendly interfaces.
+                    Hi, I'm a <strong>Full Stack Developer</strong> with a passion for building modern, scalable, and user-centric web applications. I enjoy combining clean architecture, intuitive design, and seamless interactions to create products that are both functional and enjoyable to use.
                 </p>
                 <p>
-                    While my focus is frontend, I’ve also worked with <strong>MongoDB, Node.js, and Next.js</strong> to strengthen my
-                    backend skills. I’m currently building a <strong>healthcare capstone project</strong> and previously interned at
-                    <strong> Yash Technologies</strong> using Java and Servlets.
+                    My primary expertise lies in{" "}
+                    <strong>React, Next.js, TypeScript, and the MERN stack</strong>. While I
+                    enjoy building across the full stack, I'm especially drawn to{" "}
+                    <strong>Frontend Development</strong>, where engineering meets creativity
+                    to deliver intuitive and delightful user experiences.
                 </p>
                 <p>
-                    I'm looking for opportunities at <strong>startups or product-based companies</strong> where I can grow as a developer
-                    and help build <strong>impactful, accessible apps</strong>.
+                    Lately, I've been exploring <strong>Design Engineering</strong> to better
+                    bridge the gap between design and development, with a focus on motion,
+                    interactions, and design systems. Alongside this, I'm currently deepening
+                    my knowledge of <strong>Generative AI</strong> through a hands-on cohort,
+                    exploring AI integrations, LLMs, and modern AI application development.
+                </p>
+
+                <p>
+                    Beyond that, I enjoy exploring modern technologies such as real-time
+                    systems, authentication, performance optimization, and AI-powered
+                    applications. I'm always eager to learn, collaborate with ambitious teams,
+                    and build products that create meaningful impact.
                 </p>
             </div>
 
@@ -55,7 +75,7 @@ const About = () => {
                         <strong>B.Tech in Computer Science & Engineering</strong> - VIT Bhopal University (2021–2025)
                     </li>
                     <li>
-                        Certification Courses: Ethnus MERN Internship, HTML5 & CSS3, JavaScript, Google Cloud Computing Foundations
+                        <strong>Certification Courses: </strong> Ethnus MERN Internship, HTML5 & CSS3, JavaScript, Google Cloud Computing Foundations
                     </li>
                 </ul>
             </section>
@@ -99,9 +119,9 @@ const About = () => {
 
                     {/* Others */}
                     <div>
-                        <h4 className="font-semibold mb-2">Other</h4>
+                        <h4 className="font-semibold mb-2">Tools</h4>
                         <div className="flex flex-wrap gap-6">
-                            {others.map((tech, idx) => (
+                            {toolsAndTechnologies.map((tech, idx) => (
                                 <div
                                     key={idx}
                                     className="flex flex-col items-center justify-center text-center p-2 hover:-translate-y-1 transition-all"
