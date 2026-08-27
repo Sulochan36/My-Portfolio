@@ -6,8 +6,8 @@ import { Icon } from '@iconify/react';
 
 
 const IconText = ({ icon: Icon }) => (
-    <li classNameName="flex gap-2 text-white">
-        <Icon classNameName="w-[18px] md:w-5" />
+    <li className="flex gap-2 text-foreground">
+        <Icon className="w-[18px] md:w-5" />
     </li>
 );
 
@@ -54,12 +54,13 @@ const ProjectCard = ({ data }) => {
                                     return (
                                         <div
                                             key={index}
-                                            className="flex items-center justify-center rounded-full ring-1 ring-primary/50 p-1 bg-white"
+                                            className="flex items-center justify-center rounded-full ring-1 ring-primary/50 bg-black/5 dark:bg-white/10 p-1"
                                             title={tech}
                                         >
                                             <Icon
                                                 icon={iconName}
-                                                className="w-5 h-5"
+                                                className="w-5 h-5 shrink-0 text-foreground"
+                                                aria-hidden="true"
                                             />
                                         </div>
                                     );

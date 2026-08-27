@@ -98,9 +98,9 @@ export default function StudioCard({ item }) {
                                     <div
                                         key={i}
                                         title={tech}
-                                        className="flex items-center justify-center rounded-full ring-1 ring-primary/50 p-1 bg-white"
+                                        className="flex items-center justify-center rounded-full ring-1 ring-primary/50 bg-black/5 dark:bg-white/10 p-1"
                                     >
-                                        <Icon icon={iconName} className="w-5 h-5" />
+                                        <Icon icon={iconName} className="w-5 h-5 shrink-0 text-foreground" aria-hidden="true" />
                                     </div>
                                 )
                             })}

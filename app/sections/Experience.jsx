@@ -29,8 +29,8 @@ const Experience = () => {
                                     {/* Tech stack badges */}
                                     <div className="flex flex-wrap gap-3 mt-4">
                                         {work.techStack.map((tech, idx) => (
-                                            <div key={idx} className="flex items-center w-10 h-10 gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm ring-1 ring-primary/50">
-                                                <Icon icon={tech.icon} className="w-6 h-6 rounded-full saturation-200" />
+                                            <div key={idx} title={tech.name} className="flex items-center justify-center w-10 h-10 gap-2 bg-black/5 dark:bg-white/10 px-3 py-1 rounded-full text-sm ring-1 ring-primary/50">
+                                                <Icon icon={tech.icon} className="w-6 h-6 shrink-0 text-foreground" aria-hidden="true" />
                                             </div>
                                         ))}
                                     </div>

@@ -8,7 +8,7 @@ const About = () => {
         { name: "TypeScript", icon: "logos:typescript-icon" },
         { name: "JavaScript", icon: "logos:javascript" },
         { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
-        { name: "Motion", icon: "bxl:motion-js" },
+        { name: "Motion", icon: "simple-icons:framer" },
         { name: "Shadcn/UI", icon: "simple-icons:shadcnui" },
     ];
 
@@ -24,7 +24,7 @@ const About = () => {
     const toolsAndTechnologies = [
         { name: "Git", icon: "logos:git-icon" },
         { name: "Docker", icon: "logos:docker-icon" },
-        { name: "Prisma", icon: "material-icon-theme:prisma" },
+        { name: "Prisma", icon: "logos:prisma" },
         { name: "TanStack Query", icon: "simple-icons:reactquery" },
         { name: "Zustand", icon: "devicon:zustand" },
         { name: "REST APIs", icon: "mdi:api" },
@@ -94,7 +94,7 @@ const About = () => {
                                     key={idx}
                                     className="flex flex-col items-center justify-center text-center p-2 hover:-translate-y-1 transition-all"
                                 >
-                                    <Icon icon={tech.icon} className="w-8 h-8 text-primary" />
+                                    <Icon icon={tech.icon} className="w-8 h-8 shrink-0 text-primary" aria-hidden="true" />
                                     <span className="mt-1 text-sm">{tech.name}</span>
                                 </div>
                             ))}
@@ -110,7 +110,7 @@ const About = () => {
                                     key={idx}
                                     className="flex flex-col items-center justify-center text-center p-2 hover:-translate-y-1 transition-all"
                                 >
-                                    <Icon icon={tech.icon} className="w-8 h-8 text-primary" />
+                                    <Icon icon={tech.icon} className="w-8 h-8 shrink-0 text-primary" aria-hidden="true" />
                                     <span className="mt-1 text-sm">{tech.name}</span>
                                 </div>
                             ))}
@@ -126,7 +126,7 @@ const About = () => {
                                     key={idx}
                                     className="flex flex-col items-center justify-center text-center p-2 hover:-translate-y-1 transition-all"
                                 >
-                                    <Icon icon={tech.icon} className="w-8 h-8 text-primary" />
+                                    <Icon icon={tech.icon} className="w-8 h-8 shrink-0 text-primary" aria-hidden="true" />
                                     <span className="mt-1 text-sm">{tech.name}</span>
                                 </div>
                             ))}
