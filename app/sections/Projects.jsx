@@ -23,7 +23,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-            <Link href='/studio/projects' className='rounded text-text text-sm px-2 py-2 mt-2 font-semibold bg-primary/20 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] duration-300 hover:bg-primary/80 text-center flex justify-center items-center'>View More Projects</Link>
+            <Link href='/studio/projects' className='bg-foreground text-base text-button-text md:py-1 md:px-2 px-2 py-1 rounded font-medium transition-all relative overflow-hidden shadow-[5px_5px_10px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[8px_8px_10px_rgba(0,0,0,0.5)] dark:hover:shadow-[0px_2px_10px_rgba(255,255,255,0.9)] duration-300 text-center flex justify-center items-center mt-10'>View More Projects</Link>
         </section>
     )
 }

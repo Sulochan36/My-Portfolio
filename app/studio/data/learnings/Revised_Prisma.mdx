@@ -1,0 +1,23 @@
+---
+title: "Revised Prisma with Neon"
+description: "Revisited Prisma client, adapter, and migrations, and how they fit with Neon."
+date: "2026-08-26"
+tags: ["prisma", "orm", "neon"]
+---
+
+I had used Prisma before, but the pieces were fuzzy. I went back through client, adapter, migrations, and using it with Neon.
+
+## What I re-learned
+
+- **Prisma Client** — generated, typed API from `schema.prisma`. You query models, not raw SQL, unless you opt in.
+- **Adapter** — the driver layer. Neon needs the Prisma adapter for its serverless/HTTP driver instead of a long-lived TCP connection.
+- **Migrate vs `db push`** — `migrate` is for real apps (history, deploys). `db push` is fine while hacking locally.
+- **Neon** — serverless Postgres. Pair it with the adapter + connection pooling so you do not open a new connection on every request.
+
+## Mental model
+
+`schema.prisma` → generate Client → adapter talks to Neon → migrate applies schema changes.
+
+## Next
+
+Stand up a tiny Next.js + Prisma + Neon experiment and actually run a migrate, not only `db push`.

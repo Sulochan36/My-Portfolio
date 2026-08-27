@@ -44,9 +44,12 @@ export default function StudioCard({ item }) {
 
     return (
         
-        <div className="group relative max-w-sm h-[340px] overflow-hidden rounded-2xl transition-all duration-500 border-2 border-neutral-700 shadow-[0_8px_30px_rgb(0,0,0,0.1)] dark:shadow-[0_5px_10px_rgb(255,255,255,0.1)]">
+        <div className="group relative max-w-sm h-[340px] overflow-hidden rounded-2xl transition-all duration-500 shadow-[0_5px_10px_rgb(0,0,0,0.5),-2px_-1px_5px_rgb(0,0,0,0.5)] inset-shadow-2xs inset-shadow-red-500 dark:shadow-[0_2px_8px_rgb(255,255,255,0.5)]">
 
             <div className="group relative mx-auto h-[340px] w-[340px] overflow-hidden bg-white shadow-[0px_0px_0px_1px_rgba(9,9,11,0.08),0px_1px_2px_-1px_rgba(9,9,11,0.5),0px_2px_4px_0px_rgba(9,9,11,0.5)]">
+
+                
+                
 
                     {/* image */}
                     <Wrapper>
