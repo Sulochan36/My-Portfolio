@@ -1,0 +1,31 @@
+---
+title: "Advanced RAG Patterns"
+description: "Exploring advanced techniques for implementing Retrieval-Augmented Generation (RAG) systems."
+date: "2026-08-27"
+tags: ["rag", "genai"]
+---
+## What I Learned
+
+In this I learned about advanced patterns for implementing Retrieval-Augmented Generation (RAG) systems. RAG combines retrieval of relevant documents with generative models to produce more accurate and contextually aware responses. More focus is on query transformation and rewriting the queries to improve the retrieval process. I also learned about the HyDe (Hypothetical Document Embeddings) technique.
+
+## Stages 
+
+1. **Document ingestion remains largely the same.** Documents are uploaded, split into chunks, and converted into vector embeddings before being stored in one or more databases.
+
+2. **Query transformation begins with the user's question.** Instead of sending the original query directly to a retriever, the system can improve it using techniques such as:
+	- **Query rewriting:** Rephrasing the query to make the user's intent clearer.
+	- **Step-back prompting:** Generating a broader, more conceptual question before retrieving specific information.
+	- **Subqueries:** Splitting a complex question into multiple simpler queries.
+	- **HyDE (Hypothetical Document Embeddings):** Generating a hypothetical answer or document and using its embedding to find semantically similar real documents.
+
+3. **Query routing selects the appropriate data source.** When multiple databases or retrieval systems are available, a router determines which source—or sources—should handle each query.
+
+4. **Adapters provide a consistent interface.** An adapter connects the query and routing layer to a specific database or retrieval service. It translates a common request into the format required by that service and converts the result back into a standard format. This allows the rest of the RAG pipeline to work with different databases without being tightly coupled to their individual APIs.
+
+5. **Documents are retrieved from the selected sources.** Each retriever may return several potentially relevant documents or passages. Results from multiple retrievers can then be combined and ranked using methods such as **Reciprocal Rank Fusion (RRF)**, which rewards documents that appear near the top of multiple result lists.
+
+6. **The highest-ranked context is sent to the language model.** The selected passages are combined with the original user query in a prompt. The language model uses this retrieved context to generate a grounded response.
+
+7. **The response can be evaluated and corrected.** A **Corrective RAG (CRAG)** step may assess the quality or relevance of the retrieved documents. If the context is insufficient or inaccurate, the system can trigger additional retrieval, filtering, or rewriting before generating the final answer.
+
+**My next steps are to implement this flow in RAG system and experiment with it.**
