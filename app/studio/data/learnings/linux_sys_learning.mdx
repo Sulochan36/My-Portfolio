@@ -1,0 +1,74 @@
+---
+title: "Linux Systems Learning"
+description: "Exploring Linux system internals, processes, networking, systemd, Docker, and CLI development through a Node.js system monitoring tool."
+date: "2026-09-04"
+tags: ["linux", "nodejs", "systems", "cli", "docker", "wsl"]
+---
+
+
+## What & Why
+
+I built **OpenSys**, a Linux system monitoring and diagnostics tool, to understand how system information is exposed by Linux and how developer tools interact with it.
+Instead of relying only on high-level libraries, I explored Linux interfaces such as `/proc`, `systemctl`, `ip`, and Docker, and built a Node.js layer on top of them.
+The project helped me connect **Linux fundamentals, Node.js, CLI development, processes, networking, and system monitoring** into one practical project.
+
+## Topics Explored
+
+* Linux filesystem and directory structure
+* Linux `/proc` virtual filesystem
+* CPU and memory monitoring
+* Process management and process statistics
+* Linux filesystem/disk statistics
+* System uptime
+* systemd and services
+* Network interfaces and routing
+* Docker and container monitoring
+* Node.js `fs`, `child_process`, and system APIs
+* CLI tool development
+* REST APIs
+* WebSockets and real-time metrics
+* React dashboard integration
+* WSL2 and Ubuntu development environment
+* Linux permissions and groups
+* Graceful process/server shutdown
+
+## Commands I Learned
+
+| Command                       | What I Learned                              |
+| ----------------------------- | ------------------------------------------- |
+| `pwd`                         | Show current working directory              |
+| `whoami`                      | Show current Linux user                     |
+| `uname -a`                    | Inspect kernel and system information       |
+| `ls /proc`                    | Explore Linux's virtual `/proc` filesystem  |
+| `cat /proc/uptime`            | Read system uptime                          |
+| `cat /proc/stat`              | Read CPU statistics                         |
+| `cat /proc/meminfo`           | Read memory statistics                      |
+| `cat /proc/<PID>/status`      | Inspect process information                 |
+| `cat /proc/<PID>/stat`        | Read low-level process statistics           |
+| `ip addr`                     | Inspect network interfaces and IP addresses |
+| `ip route`                    | Inspect routing information                 |
+| `systemctl list-units`        | Inspect running system services             |
+| `systemctl is-system-running` | Check systemd state                         |
+| `journalctl`                  | Read system logs                            |
+| `docker ps`                   | Inspect running containers                  |
+| `sudo`                        | Execute commands with elevated privileges   |
+| `usermod -aG docker $USER`    | Add a user to the Docker group              |
+| `chmod +x`                    | Make a file executable                      |
+
+## What I Might Explore Next
+
+* Linux signals and process control
+* `/proc` deeper: file descriptors, threads, command arguments
+* System calls and how Linux exposes hardware/system resources
+* Bash scripting and Linux automation
+* CPU/process monitoring at a deeper level
+* Linux networking fundamentals
+* systemd units and service management
+* Linux permissions and security
+* Packaging CLI tools for Linux
+* C/C++ or Rust for lower-level Linux tooling
+* Open-source Linux projects and upstream contributions
+
+## Key Takeaway
+
+**The main learning was not just building a system monitor — it was learning where Linux system information comes from and how software can interact with those interfaces.**
